@@ -1,162 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>College Timetable - CSE Department</title>
-  <style>
-    body{
-      font-family: "Georgia", "Times New Roman", serif;
-      padding: 20px;
-      background: #fff;
-      color: #111;
-    }
-    .timetable-wrap{
-      max-width: 1000px;
-      margin: 10px auto;
-    }
-    table.timetable{
-      width: 100%;
-      border-collapse: collapse;
-      border: 3px solid #111;
-      table-layout: fixed;
-      font-size: 14px;
-    }
-    table.timetable caption{
-      caption-side: top;
-      text-align: center;
-      font-weight: bold;
-      padding: 10px 0;
-      font-size: 18px;
-    }
-    table.timetable th,
-    table.timetable td{
-      border: 1px solid #111;
-      padding: 8px;
-      vertical-align: middle;
-      text-align: center;
-    }
-    table.timetable th.day{
-      width: 12%;
-    }
-    /* make time columns roughly equal */
-    table.timetable th.time{
-      width: calc((100% - 12%) / 7);
-    }
-
-    /* smaller text for the lab details nested table */
-    .lab-details{
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 12px;
-    }
-    .lab-details td, .lab-details th{
-      border: 1px solid #111;
-      padding: 6px;
-      text-align: center;
-    }
-
-    /* subtle styling to mimic printed look */
-    .bold-left { text-align: left; font-weight: bold; padding-left: 10px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment4</title>
 </head>
+
 <body>
-  <div class="timetable-wrap">
-    <table class="timetable" aria-label="College Timetable - CSE Department">
-      <caption>College Timetable - CSE Department</caption>
-
-      <!-- header row: Day/Time + time slots -->
-      <thead>
-        <tr>
-          <th class="day">Day / Time</th>
-          <th class="time">9:00 - 10:00</th>
-          <th class="time">10:00 - 11:00</th>
-          <th class="time">11:00 - 12:00</th>
-          <th class="time">12:00 - 1:00</th>
-          <th class="time">1:00 - 2:00</th>
-          <th class="time">2:00 - 3:00</th>
-          <th class="time">3:00 - 4:00</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <!-- Monday -->
-        <tr>
-          <th class="bold-left">Monday</th>
-          <td>Mathematics</td>
-          <td>English</td>
-          <td></td>
-          <td>Break</td>
-          <td>Computer Lab</td>
-          <td></td>
-          <td>Sports</td>
-        </tr>
-
-        <!-- Tuesday -->
-        <tr>
-          <th class="bold-left">Tuesday</th>
-          <td></td>
-          <td>C Programming</td>
-          <td>Physics</td>
-          <td>Break</td>
-          <td>Electronics Lab</td>
-          <td></td>
-          <td>Library</td>
-        </tr>
-
-        <!-- Wednesday (note nested Lab Details occupying two rightmost cells) -->
-        <tr>
-          <th class="bold-left">Wednesday</th>
-          <td>Mathematics</td>
-          <td>English</td>
-          <td></td>
-          <td>Break</td>
-          <td>Computer Networks</td>
-
-          <!-- Nest the lab details into the last two columns as a single cell spanning 2 cols -->
-          <td colspan="2" rowspan="1">
-            <!-- nested table -->
-            <table class="lab-details" role="table" aria-label="Lab details">
-              <tr>
-                <th colspan="2">Lab Details</th>
-              </tr>
-              <tr>
-                <td><strong>Batch A</strong></td>
-                <td>DBMS Lab</td>
-              </tr>
-              <tr>
-                <td><strong>Batch B</strong></td>
-                <td>OS Lab</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-
-        <!-- Thursday -->
-        <tr>
-          <th class="bold-left">Thursday</th>
-          <td>Workshop</td>
-          <td></td>
-          <td>Physics</td>
-          <td>Break</td>
-          <td>Mathematics</td>
-          <td>English</td>
-          <td>Seminar</td>
-        </tr>
-
-        <!-- Friday -->
-        <tr>
-          <th class="bold-left">Friday</th>
-          <td>Computer Networks</td>
-          <td>English</td>
-          <td>Physics</td>
-          <td>Break</td>
-          <td>Project Work</td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    <center>
+        <form>
+            <fieldset>
+                <h2>Hotel Room Booking Form</h2>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="phone">Phone:</label>
+                <input type="number" id="phone" name="phone" required><br><br>
+                <label for="date">Check-In Date:</label>
+                <input type="date" id="date" name="checkin" required><br><br>
+                <label for="checkout">Check-Out Date:</label>
+                <input type="date" id="checkout" name="checkout" required><br><br>
+                <label for="roomtype">Room Type:</label>
+                <select id="roomtype" name="roomtype" required>
+                    <option value="single">Single</option>
+                    <option value="double">Double</option>
+                    <option value="suite">Suite</option>
+                </select><br><br>
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" name="guests" required><br><br>
+                <label for="requests">Special Requests:</label><br>
+                <textarea id="requests" name="requests"></textarea><br><br><br>
+                <input type="submit" value="Book Now" />
+                <input type="reset" value="Reset Form" />
+            </fieldset>
+        </form>
+    </center>
 </body>
+
 </html>
