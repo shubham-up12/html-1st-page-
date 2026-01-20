@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h2 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+/* Base styles for all lists (removes bullets and padding) */
+div ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: auto; /* Used for clearing floats in the float example */
+}
+
+/* Base styles for all links */
+div ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: block; /* Default block behavior for link text */
+    text-align: left;
+}
+
+/* --- 1. BLOCK EXAMPLE (Vertical Menu) --- */
+/* li is naturally a block element, so this is the default styling of the menu. */
+.menu-block ul li {
+    /* li is naturally display: block; */
+    background-color: #4A90E2; /* Blue */
+    margin-bottom: 1px; /* Separator line */
+    width: 100%; /* Take up full width */
+}
+
+/* --- 2. INLINE EXAMPLE (Horizontal, but width/height/padding on LI is ignored) --- */
+.menu-inline ul li {
+    /* Making LI inline causes it to flow horizontally */
+    display: inline;
+    /* Background/padding on the LI won't work well, so we style the anchor */
+}
+
+.menu-inline ul li a {
+    display: inline; /* Keep anchor inline so it flows with the li */
+    background-color: #7ED321; /* Green */
+    padding: 5px 10px; /* Smaller padding for this example */
+    margin-right: 5px; /* Spacing between items */
+    text-align: center;
+}
+
+/* --- 3. INLINE-BLOCK EXAMPLE (Horizontal, retains block properties) --- */
+.menu-inline-block ul li {
+    /* Making LI inline-block causes it to flow horizontally BUT retain block properties like width/height/padding */
+    display: inline-block;
+    background-color: #9C27B0; /* Purple */
+    margin-right: 5px;
+}
+
+.menu-inline-block ul li a {
+    text-align: center;
+}
+
+/* --- 4. FLOAT EXAMPLE (Horizontal) --- */
+.menu-float ul li {
+    /* Floating the LI causes it to flow horizontally */
+    float: left;
+    background-color: #F5A623; /* Orange */
+    margin-right: 5px;
+}
+
+.menu-float ul li a {
+    text-align: center;
+}
