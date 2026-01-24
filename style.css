@@ -2,70 +2,109 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
-    background-color: #f2f2f2;
-    color: #333;
+    background: #fafafa;
 }
 
-/* Header */
-header {
-    background-color: #222;
-    color: white;
-    padding: 30px;
+/* Top Bar */
+.top-bar {
+    height: 55px;
+    background: #fff;
+    border-bottom: 1px solid #dbdbdb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 22px;
+}
+
+.top-icons i {
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+/* Stories */
+.stories {
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+    background: #fff;
+    border-bottom: 1px solid #dbdbdb;
+    overflow-x: auto;
+}
+
+.story {
     text-align: center;
+    font-size: 12px;
 }
 
-/* Navigation */
-nav {
-    background-color: #444;
-    text-align: center;
+.story img {
+    border-radius: 50%;
+    border: 2px solid #e1306c;
+    padding: 2px;
 }
 
-nav a {
-    color: white;
-    padding: 15px;
-    display: inline-block;
-    text-decoration: none;
+/* Feed */
+.feed {
+    max-width: 500px;
+    margin: auto;
 }
 
-nav a:hover {
-    background-color: #666;
+/* Post */
+.post {
+    background: #fff;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #dbdbdb;
 }
 
-/* Sections */
-section {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 5px;
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
 }
 
-h2 {
-    margin-bottom: 15px;
+.post-header img {
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
-/* Skills */
-ul {
-    list-style: none;
+.post-header i {
+    margin-left: auto;
 }
 
-ul li {
-    background: #222;
-    color: white;
-    padding: 8px;
-    margin: 5px 0;
-    width: fit-content;
-    border-radius: 4px;
+/* Image */
+.post-img {
+    width: 100%;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 15px;
-    background: #222;
-    color: white;
+/* Actions */
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 22px;
+}
+
+.post-actions i {
+    margin-right: 10px;
+}
+
+/* Details */
+.post-details {
+    padding: 0 10px 10px;
+    font-size: 14px;
+}
+
+.time {
+    font-size: 12px;
+    color: gray;
 }
