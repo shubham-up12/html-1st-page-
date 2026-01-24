@@ -1,55 +1,107 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Shubham Kumar Upadhyay | Portfolio</title>
+    <title>YouTube Clone</title>
+
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Shubham Kumar Upadhyay</h1>
-        <p>1st Year Student | ABES Engineering College</p>
-    </header>
+<!-- Header -->
+<header class="header">
+    <div class="left">
+        <i class="fa-solid fa-bars"></i>
+        <h1>YouTube</h1>
+    </div>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-        <a href="#project">projects</a>
-    </nav>
+    <div class="search">
+        <input type="text" placeholder="Search">
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            Hello! My name is Shubham Kumar Upadhyay. I am a 1st year student at
-            ABES Engineering College. I am learning web development and building
-            projects using HTML and CSS.
-        </p>
-    </section>
+    <div class="right">
+        <i class="fa-regular fa-video"></i>
+        <i class="fa-regular fa-bell"></i>
+        <img src="https://i.pravatar.cc/30">
+    </div>
+</header>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>C++ Programming</li>
-            <li>Basic Web Design</li>
-            <li>DSA</li>
-        </ul>
-    </section>
+<!-- Main -->
+<div class="container">
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email:  sanjeevupadhaya12@gmail.com-</p>
-        <p>College: ABES Engineering College</p>
-    </section>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="item active"><i class="fa-solid fa-house"></i> Home</div>
+        <div class="item"><i class="fa-regular fa-compass"></i> Explore</div>
+        <div class="item"><i class="fa-solid fa-play"></i> Subscriptions</div>
+        <hr>
+        <div class="item"><i class="fa-solid fa-clock"></i> History</div>
+        <div class="item"><i class="fa-solid fa-list"></i> Playlists</div>
+        <div class="item"><i class="fa-solid fa-video"></i> Your videos</div>
+    </aside>
 
-    <footer>
-        <p>© 2026 Shubham Kumar Upadhyay</p>
-    </footer>
+    <!-- Videos -->
+    <main class="videos">
+
+        <!-- Video Card -->
+        <div class="video">
+            <div class="thumbnail">
+                <img src="https://picsum.photos/400/225?random=1">
+                <span class="time">12:45</span>
+            </div>
+
+            <div class="details">
+                <img src="https://i.pravatar.cc/40?img=1">
+                <div>
+                    <h3>Realistic YouTube Clone using HTML & CSS</h3>
+                    <p>CodeMaster</p>
+                    <span>1.2M views • 2 days ago</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="video">
+            <div class="thumbnail">
+                <img src="https://picsum.photos/400/225?random=2">
+                <span class="time">8:21</span>
+            </div>
+
+            <div class="details">
+                <img src="https://i.pravatar.cc/40?img=2">
+                <div>
+                    <h3>Build YouTube UI from Scratch</h3>
+                    <p>Web Dev Hub</p>
+                    <span>540K views • 1 week ago</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="video">
+            <div class="thumbnail">
+                <img src="https://picsum.photos/400/225?random=3">
+                <span class="time">15:09</span>
+            </div>
+
+            <div class="details">
+                <img src="https://i.pravatar.cc/40?img=3">
+                <div>
+                    <h3>HTML CSS Projects for Practice</h3>
+                    <p>Frontend School</p>
+                    <span>900K views • 3 days ago</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</div>
 
 </body>
 </html>
-
