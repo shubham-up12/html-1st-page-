@@ -1,4 +1,4 @@
-/* Style the whole page */
+
 body {
     background-color: lightblue;
     font-family: Arial, sans-serif;
@@ -29,3 +29,4 @@ button {
 button:hover {
     background-color: darkred;
 }
+
